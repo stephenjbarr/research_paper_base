@@ -1,7 +1,9 @@
 \documentclass[11pt]{article}
 \usepackage{fullpage}
 % \usepackage[utf8]{inputenc}
-% \usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{fontspec}
 % \usepackage[T1]{fontenc}
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{fixltx2e}
@@ -22,37 +24,70 @@
 \usepackage{listings,relsize}
 \usepackage{natbib}
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%     comment out this block if you do not intend to use     %%%%%%%%
+%%%%%%%%     vc-bundle                                              %%%%%%%% 
 \immediate\write18{sh ./vc}
 \input{vc}
+\usepackage[rgb,x11names]{xcolor}
+\usepackage{prelim2e}
+\renewcommand*{\PrelimWords}{\textnormal{\small \myshorttitle}}                           
+\renewcommand*{\PrelimText}{\textnormal{\small\textcolor{black!40}{\PrelimWords,
+      \VCAuthor\ -- \VCDateISO\ -- commit \texttt{\VCRevision}. URL: \url{}}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%                CHANGE RESEARCH PAPER TITLE                    %%%%%%%%%
+\newcommand{\mytitle}{Research Paper Title}
+\newcommand{\myshorttitle}{Research Paper}
+\newcommand{\mypdfauthor}{Stephen J. Barr}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%% Uncomment this to change the font of the title and section headings
+\newfontfamily\headingfont[]{Gillius ADF}
+% \newfontfamily\headingfont[]{URW Palladio L}
+\titleformat*{\section}{\Large\headingfont}
+\titleformat*{\subsection}{\Large\headingfont}
+\titleformat*{\subsubsection}{\Large\headingfont}
+\renewcommand{\maketitlehooka}{\headingfont}
+
+
 
 \usepackage{hyperref}
 
 \hypersetup{
-  pdftitle={Research Paper Title},  %%% <---- CHANGE THIS
-  pdfauthor={Stephen J. Barr}       %%% <---- CHANGE THIS TOO!
+  pdftitle={\mytitle}, 
+  pdfauthor={\mypdfauthor}
 }
 
-\numberwithin{equation}{section}
-\newshadetheorem{theorem}{Theorem}
+
+%%% OTHER NICE OPTIONS
+% \numberwithin{equation}{section}
+% \newshadetheorem{theorem}{Theorem}
 
 
-\title{Research Paper Title}
+\title{\mytitle}
 \author{
   Stephen J. Barr \\
   ISOM \\
   Foster School of Business \\
   University of Washington \\
   email: \texttt{stevejb@uw.edu}
-  \and
-  Other Author \\
-  Other Department\\
-  Other School \\
-  Other University \\ 
-  email: \texttt{person@place.edu}
+  % \and
+  % Other Author \\
+  % Other Department\\
+  % Other School \\
+  % Other University \\ 
+  % email: \texttt{person@place.edu}
 }
 
 \begin{document}
+
 
 \date{}
 \maketitle
