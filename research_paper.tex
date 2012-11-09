@@ -1,0 +1,92 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+% \usepackage[utf8]{inputenc}
+% \usepackage{fontspec}
+% \usepackage[T1]{fontenc}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{latexsym}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{color}
+\usepackage{shadethm}
+\usepackage{listings,relsize}
+\usepackage{natbib}
+
+
+\immediate\write18{sh ./vc}
+\input{vc}
+
+\usepackage{hyperref}
+
+\hypersetup{
+  pdftitle={Research Paper Title},  %%% <---- CHANGE THIS
+  pdfauthor={Stephen J. Barr}       %%% <---- CHANGE THIS TOO!
+}
+
+\numberwithin{equation}{section}
+\newshadetheorem{theorem}{Theorem}
+
+
+\title{Research Paper Title}
+\author{
+  Stephen J. Barr \\
+  ISOM \\
+  Foster School of Business \\
+  University of Washington \\
+  email: \texttt{stevejb@uw.edu}
+  \and
+  Other Author \\
+  Other Department\\
+  Other School \\
+  Other University \\ 
+  email: \texttt{person@place.edu}
+}
+
+\begin{document}
+
+\date{}
+\maketitle
+\begin{center}
+  Initial Version: November 8, 2012
+\end{center}
+
+
+\begin{abstract}
+This is an abstract. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac ante lectus. Morbi porttitor arcu aliquam libero pulvinar pharetra a in libero. Vestibulum vel dolor et turpis laoreet mollis sed eget eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+\end{abstract}
+
+
+\input{introduction.tex}
+\input{literature_review.tex}
+\input{model.tex}
+\input{methods.tex}
+\input{results.tex}
+\input{conclusion.tex}
+
+%% bibliography
+\bibliographystyle{plainnat}
+\bibliography{mybib}
+
+
+%% Uncomment for appendix
+% \appendix
+
+
+\end{document}
+
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
