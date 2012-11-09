@@ -16,5 +16,5 @@ vc-bundle defines some TeX macros for the inclusion of information about the ver
 ### Rendering ###
 I render using XeLaTeX as it can handle fonts nicely. If you are not using XeLaTeX. 
 
-#### Fonts #### 
+#### Fonts 
 The [Arkandis Digital Foundry](http://arkandis.tuxfamily.org/adffonts.html) has some nice free fonts to use. If you don't want to use any special fonts, comment out lines beginning with `\newfontfamily`
