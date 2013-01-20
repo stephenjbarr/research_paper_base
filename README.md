@@ -26,6 +26,8 @@ vc-bundle defines some TeX macros for the inclusion of information about the ver
 
 [vc-bundle source](http://www.ctan.org/tex-archive/support/vc).
 
+**NOTE:** You may have to manually run the command ``sh vc`` once.
+
 
 ### Rendering ###
 I render using XeLaTeX as it can handle fonts nicely. You will need to comment out any font-related lines if you are not using xelatex.
