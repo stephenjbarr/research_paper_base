@@ -1,3 +1,6 @@
 [submodule "sjb-my-bibtex"]
 	path = sjb-my-bibtex
 	url = git@github.com:stephenjbarr/sjb-my-bibtex.git
+[submodule "barrCustom"]
+	path = barrCustom
+	url = git@github.com:stephenjbarr/barrCustom.git
